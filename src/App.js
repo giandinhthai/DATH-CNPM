@@ -29,8 +29,6 @@ const App = () => {
         navIndex={navIndex}
         setNavIndex={setNavIndex}
       />
-      {/* <Navbar navIndex={navIndex} setNavIndex={setNavIndex} /> */}
-
       <div style={{ paddingTop: fixedTopHeight }}>
         <MainContext navIndex={navIndex} showDetail={() => {}} />
 
