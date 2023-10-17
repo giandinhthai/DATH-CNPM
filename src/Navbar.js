@@ -13,7 +13,7 @@ const Navbar = (props) => {
                       props.navIndex === index ? "nav-link active" : "nav-link"
                     }
                     aria-current="page"
-                    href="#"
+                    href="#home"
                     onClick={() => {
                       props.setNavIndex(index);
                     }}
