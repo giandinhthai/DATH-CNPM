@@ -3,9 +3,9 @@ import Home from "./Home";
 const MainContext = (props) => {
   return (
     <div>
-      {props.navIndex === -1 ? (
+      {props.mainDisplay === "home" ? (
         <Home />
-      ) : props.navIndex === 0 ? (
+      ) : props.mainDisplay === "fixrequest" ? (
         <FixRequest showDetail={props.showDetail} />
       ) : null}
     </div>

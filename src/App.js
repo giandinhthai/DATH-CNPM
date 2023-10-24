@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import MainContext from "./MainContext";
 const App = () => {
   const [fixedTopHeight, setFixTopHeight] = useState(0);
-  const [navIndex, setNavIndex] = useState(-1);
+  const [mainDisplay, setMainDisplay] = useState("home");
   useEffect(() => {
     const fixedTop = document.querySelector("#fixedTop");
     if (fixedTop) {
@@ -26,11 +26,15 @@ const App = () => {
         onClickOnLogout={() => {
           console.log("logout");
         }}
-        navIndex={navIndex}
-        setNavIndex={setNavIndex}
+        mainDisplay={mainDisplay}
+        setMainDisplay={setMainDisplay}
       />
       <div style={{ paddingTop: fixedTopHeight }}>
-        <MainContext navIndex={navIndex} showDetail={() => {}} />
+        <MainContext
+          mainDisplay={mainDisplay}
+          setMainDisplay={setMainDisplay}
+          showDetail={() => {}}
+        />
 
         <Footer />
       </div>

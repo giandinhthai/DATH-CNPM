@@ -1,6 +1,9 @@
 const Header = (props) => {
   const formatMoney = props.money.toLocaleString();
-  const items = ["Yeu cau sua chua", "Quan ly so du"];
+  const items = [
+    { name: "Yeu cau sua chua", tag: "fixrequest" },
+    { name: "Quan ly so du", tag: "balance" },
+  ];
   return (
     <div id="fixedTop" className="fixed-top bg-black">
       <div className="container-fluid col-lg-12 text-light">
@@ -10,7 +13,7 @@ const Header = (props) => {
               <div
                 className="col-2"
                 onClick={() => {
-                  props.setNavIndex(-1);
+                  props.setMainDisplay("home");
                 }}
               >
                 <h1>HomeFix</h1>
@@ -19,10 +22,10 @@ const Header = (props) => {
                 <div
                   className="col-2 pt-3"
                   onClick={() => {
-                    props.setNavIndex(index);
+                    props.setMainDisplay(item.tag);
                   }}
                 >
-                  <h4>{item}</h4>
+                  <h4>{item.name}</h4>
                 </div>
               ))}
             </div>
